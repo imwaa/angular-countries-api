@@ -16,7 +16,4 @@ export class AppComponent implements OnInit {
     this.theme = this.themeService.mode$;
   }
 
-  toggleTheme() {
-    this.themeService.toggleMode();
-  }
 }
