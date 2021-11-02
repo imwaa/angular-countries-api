@@ -1,9 +1,10 @@
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
+<div class="card">
+  <img class="card-img-top" [src]="country.flags.png" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{country.name.common}}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-    </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <p><b>Capital:</b> {{country.capital}}</p>
+    <p><b>Population:</b> {{country.population}}</p>
+
+    <a href="#" class="btn btn-dark mt-3">More detail</a>
   </div>
 </div>

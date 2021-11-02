@@ -1,0 +1,27 @@
+.search-filter {
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 20px 0 20px 0 ;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+  width: 33%;
+@media (max-width: 765px) {
+  margin: 20px auto 20px auto;
+    width: 100%;
+}
+
+  span {
+    font-size: 1rem;
+    padding-right: 0.5rem;
+  }
+
+  input {
+    font-size: 1rem;
+    border: none;
+    background-color: inherit;
+    outline: none;
+  }
+}
+
+
+
