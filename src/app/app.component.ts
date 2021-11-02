@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ApiService } from './services/api.service';
 import { Theme, ThemeService } from './services/theme.service'
 
 @Component({
@@ -10,7 +11,7 @@ import { Theme, ThemeService } from './services/theme.service'
 export class AppComponent implements OnInit {
   theme: Observable<Theme>;
 
-  constructor(private themeService: ThemeService) { }
+  constructor(private themeService: ThemeService, private api: ApiService) { }
 
   ngOnInit() {
     this.theme = this.themeService.mode$;
