@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown-region',
@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dropdown-region.component.scss'],
 })
 export class DropdownRegionComponent implements OnInit {
+  @Output() messageEvent = new EventEmitter<string>();
+
   listOfRegions: string[] = [
     'Europe',
-    'America',
+    'Americas',
     'Asia',
     'Africa',
     'Oceania',
@@ -21,7 +23,7 @@ export class DropdownRegionComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  afficher(e) {
-    alert(e.target.value);
+  sendSelectedRegion(e) {
+    this.messageEvent.emit(e.target.value);
   }
 }

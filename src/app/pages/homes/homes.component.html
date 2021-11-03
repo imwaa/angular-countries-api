@@ -5,7 +5,7 @@
       <input type="text" placeholder="Search for a country..." [(ngModel)]="searchedCountry" />
     </div>
     <div class="dropdown-region">
-      <app-dropdown-region></app-dropdown-region>
+      <app-dropdown-region (messageEvent)="receiveSelectedRegion($event)"></app-dropdown-region>
     </div>
 
   </div>
@@ -13,4 +13,7 @@
     <app-country-card *ngFor="let country of countries" [country]="country">
     </app-country-card>
   </div>
+</div>
+<div class="footer">
+  Made with ❤ by Walid Salhi
 </div>
