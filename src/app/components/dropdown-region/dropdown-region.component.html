@@ -1,0 +1,3 @@
+<select class="form-select" aria-label="Default select example" (change)="afficher($event)">
+  <option *ngFor="let region of listOfRegions" [value]="region">{{region}}</option>
+</select>

@@ -11,6 +11,7 @@ import { Country } from 'src/app/types/api';
 export class HomesComponent implements OnInit {
   private source: Country[];
   searchedCountry?: string;
+  selectedRegion?: string;
 
   constructor(private api: ApiService) {}
 
@@ -21,7 +22,6 @@ export class HomesComponent implements OnInit {
   }
 
   get countries() {
-    console.log(this.searchedCountry);
     return this.source
       ? this.source.filter((country) =>
           this.searchedCountry

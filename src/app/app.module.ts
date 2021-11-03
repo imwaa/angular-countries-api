@@ -11,6 +11,7 @@ import { CountryCardComponent } from './components/country-card/country-card.com
 import { FilterComponentComponent } from './components/filter-component/filter-component.component';
 
 import { FormsModule } from '@angular/forms';
+import { DropdownRegionComponent } from './components/dropdown-region/dropdown-region.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     DetailsComponent,
     CountryCardComponent,
     FilterComponentComponent,
+    DropdownRegionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
