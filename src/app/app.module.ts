@@ -10,6 +10,8 @@ import { DetailsComponent } from './pages/details/details.component';
 import { CountryCardComponent } from './components/country-card/country-card.component';
 import { FilterComponentComponent } from './components/filter-component/filter-component.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,12 +21,8 @@ import { FilterComponentComponent } from './components/filter-component/filter-c
     CountryCardComponent,
     FilterComponentComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

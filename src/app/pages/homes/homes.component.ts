@@ -10,6 +10,7 @@ import { Country } from 'src/app/types/api';
 })
 export class HomesComponent implements OnInit {
   private source: Country[];
+  searchedCountry?: string;
 
   constructor(private api: ApiService) {}
 
@@ -20,6 +21,15 @@ export class HomesComponent implements OnInit {
   }
 
   get countries() {
-    return this.source;
+    console.log(this.searchedCountry);
+    return this.source
+      ? this.source.filter((country) =>
+          this.searchedCountry
+            ? country.name.official
+                .toLowerCase()
+                .includes(this.searchedCountry.toLowerCase())
+            : country
+        )
+      : this.source;
   }
 }

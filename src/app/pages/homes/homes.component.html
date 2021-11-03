@@ -1,7 +1,7 @@
 <div class="container">
   <div class="search-filter">
     <span class="fa fa-search"></span>
-    <input type="text" placeholder="Search for a country..." />
+    <input type="text" placeholder="Search for a country..." [(ngModel)]="searchedCountry" />
   </div>
   <div class=" d-flex justify-content-around align-items-start flex-wrap">
     <app-country-card *ngFor="let country of countries" [country]="country">
